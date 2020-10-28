@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './Header';
 
 class App extends Component {
     render () {
         return (
-            <div className="container">
-                <h3 className="text-center">Main page!</h3>
-            </div>
+            <BrowserRouter>
+                <div>
+                    <Header />
+                </div>
+            </BrowserRouter>
         );
     }
 }
 
-export default Component;
+export default App;
 
 if (document.getElementById('root')) {
     ReactDOM.render(<App />, document.getElementById('root'));
